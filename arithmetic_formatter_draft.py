@@ -1,6 +1,3 @@
-
-
-
 def arithmetic_formatter(problems, show_answers=False):
     top_parts=[]
     bottom_parts=[]
