@@ -47,7 +47,7 @@ def arithmetic_formatter(problems, show_answers=False):
 def main():
     print("Welcome to the Arithmetic Formatter!")
     print("This program formats arithmetic problems vertically.\n")
-    n=int(input("How many problems do you want to enter: "))
+    n=int(input("How many problems do you want to enter(1-5)?: "))
     problems=[]
     for i in range(n):
         problem=input(f"Enter problem {i +1}:(e.g. 32 + 698) " )#remember to space after each problem
