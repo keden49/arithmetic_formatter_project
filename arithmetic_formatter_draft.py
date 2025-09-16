@@ -45,6 +45,8 @@ def arithmetic_formatter(problems, show_answers=False):
     return arranged_problems
 
 def main():
+    print("Welcome to the Arithmetic Formatter!")
+    print("This program formats arithmetic problems vertically.\n")
     n=int(input("How many problems do you want to enter: "))
     problems=[]
     for i in range(n):
