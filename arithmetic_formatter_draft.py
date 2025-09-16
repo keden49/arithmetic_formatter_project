@@ -54,6 +54,8 @@ def main():
         problems.append(problem)
     solutions=arithmetic_formatter(problems,show_answers=True)
     print("\nRespective Solutions:\n")
+
+
     print(solutions)
 
 if __name__=="__main__":
