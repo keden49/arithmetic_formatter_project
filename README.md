@@ -49,19 +49,19 @@ KEY CONSTRAINTS
 -Optional answers: Solutions are only displayed if show_answers=True.
 
 
-RUNNING THE PROJECT 
+RUNNING THE PROJECT (Use  command line Terminal for best responsiveness)
 
 OPTION 1
 
 1)Clone this repository 
 ```bash
-git clone https://github.com/keden49/arithmetic-formatter_project.git
+git clone https://github.com/keden49/arithmetic_formatter_project.git
 ```
 2) Navigate into the project folder:
    ```bash
    cd arithmetic_formatter_project
    ```
-3) Run the Python file:
+3) Run the Python file:(Re run this code to iterate)
    ```bash
    python arithmetic_formatter_draft.py
    ```
@@ -78,15 +78,49 @@ git clone https://github.com/keden49/arithmetic-formatter_project.git
      730      3799
    ```  
 OPTION 2
-import as a module 
+
+1)Navigate to a project folder in  your terminal
+```bash
+cd\path\your project_folder
+```
+(otherwise create one using command ```mkdir```)
+
+2)Create a new python script  file
+eg
+```console
+touch testfile.py
+
+```
+3)Import as module( copy and paste on your terminal)
 ```python
 from arithmetic_formatter_draft import arithmetic_formatter
 ```
+4)Test your problem in the same file eg 
+```python
+from arithmetic_formatter_draft import arithmetic_formatter
+# Example 1: Test basic formatting
+print("Example 1: Basic Problems")
+problems1 = ["32 + 698", "3801 - 2", "45 + 43", "123 + 49"]
+result1 = arithmetic_formatter(problems1)
+print(result1)
+
+# Example 2: Test with answers shown
+print("\nExample 2: With Answers")
+result2 = arithmetic_formatter(problems1, show_answers=True)
+print(result2)
+```
+5)Run the script in your terminal after saving it 
+```bash
+ python testfile.py
+
+```console
+WARNING:AN ERROR MESSAGE WILL BE RETURNED IF YOUR PROBLEM DOESNT MEET THE CONSTRAINTS
+```
+
 
 TAKEAWAY 
 
-Completing this project gave me confidence in my coding journey. It proved I can move beyond small practice problems and build something structured, useful, and worth sharing.
-
+This project strengthened my Python fundamentals specifically in string manipulation, formatting, and function design, while also teaching me defensive programming with input validation. Beyond coding, it gave me hands-on practice with problem decomposition, algorithmic thinking, version control using Git, and professional documentation solidifying the full cycle of building and sharing a functional application.
 
 
 
