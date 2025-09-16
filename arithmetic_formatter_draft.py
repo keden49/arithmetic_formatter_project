@@ -53,7 +53,7 @@ def main():
         problem=input(f"Enter problem {i +1}:(e.g. 32 + 698) " )#remember to space after each problem
         problems.append(problem)
     solutions=arithmetic_formatter(problems,show_answers=True)
-    print("Respective Solutions\n")
+    print("\nRespective Solutions:\n")
     print(solutions)
 
 if __name__=="__main__":
