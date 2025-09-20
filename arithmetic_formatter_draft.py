@@ -9,13 +9,14 @@ def arithmetic_formatter(problems, show_answers=False):
         numb=problem.split()#split problem into two operands and one operator
         operator=numb[1]
         if len(numb)!=3 :
-            return "Error:problem should contain two numbers and one operator."
-        if not numb[0].isdigit() and numb[2].isdigit():
+            return f'Error:Problem "{problem}" is not properly formatted .Please use the format "number operator number" (eg 32 + 698) with spaces in between.'
+        if not numb[0].isdigit() or not numb[2].isdigit():
             return "Error:Numbers must only contain digits."
         if not operator in["+","-","*","/"]:
             return "Error:Operator must be '+' or'-'."
         if len(numb[0])>6 or len(numb[2])>6:
             return "Error:Numbers cannot contain more than 6 digits."
+            
 
         longest_width=max(len(numb[0]),len(numb[2]))+2 #adding placeholders for the operator and space
         #Right Alignment of problems
@@ -51,6 +52,11 @@ def arithmetic_formatter(problems, show_answers=False):
 def main():
     print("Welcome to the Arithmetic Formatter!")
     print("This program formats arithmetic problems vertically.\n")
+    print("RULES TO OBSERVE.\n")
+    print("1. You can enter a maximum of 10 problems.")
+    print("2. Please ensure to add spaces in between numbers and operators to avoid errors.")
+    print("3. Numbers should only contain digits and cannot be more than 6 digits long.")
+    print("4. Supported operators are +, -, *, and /.\n")
     n=int(input("How many problems do you want to enter: "))
     problems=[]
     for i in range(n):
