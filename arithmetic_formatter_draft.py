@@ -14,8 +14,8 @@ def arithmetic_formatter(problems, show_answers=False):
             return "Error:Numbers must only contain digits."
         if not operator in["+","-","*","/"]:
             return "Error:Operator must be '+' or'-'."
-        if len(numb[0])>4 or len(numb[2])>4:
-            return "Error:Numbers cannot contain more than 4 digits."
+        if len(numb[0])>6 or len(numb[2])>6:
+            return "Error:Numbers cannot contain more than 6 digits."
 
         longest_width=max(len(numb[0]),len(numb[2]))+2 #adding placeholders for the operator and space
         #Right Alignment of problems
