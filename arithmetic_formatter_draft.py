@@ -3,8 +3,8 @@ def arithmetic_formatter(problems, show_answers=False):
     bottom_parts=[]
     dash_parts=[]
     answers_parts=[]
-    if len(problems)>5:
-        return "Error:Too many problems (write a max of five)."
+    if len(problems)>10:
+        return "Error:Too many problems (write a max of ten)."
     for problem in problems:
         numb=problem.split()#split problem into two operands and one operator
         operator=numb[1]
@@ -12,7 +12,7 @@ def arithmetic_formatter(problems, show_answers=False):
             return "Error:problem should contain two numbers and one operator."
         if not numb[0].isdigit() and numb[2].isdigit():
             return "Error:Numbers must only contain digits."
-        if not operator in["+","-"]:
+        if not operator in["+","-","*","/"]:
             return "Error:Operator must be '+' or'-'."
         if len(numb[0])>4 or len(numb[2])>4:
             return "Error:Numbers cannot contain more than 4 digits."
@@ -25,7 +25,11 @@ def arithmetic_formatter(problems, show_answers=False):
         if show_answers:
             if operator=="+":
                 result=str(int(numb[0])+int(numb[2]))
-            else:
+            elif operator=="*":
+                result=str(int(numb[0])*int(numb[2]))
+            elif operator=="/": 
+                result=str(int(numb[0])//int(numb[2]))  
+            elif operator=="-":
                 result=str(int(numb[0])-int(numb[2]))
             answer_part=" "*(longest_width-len(result))+result
             answers_parts.append(answer_part)
@@ -55,6 +59,6 @@ def main():
     solutions=arithmetic_formatter(problems,show_answers=True)
     print("\nRespective Solutions:\n")
     print(solutions)
-    
+
 if __name__=="__main__":
     main()
