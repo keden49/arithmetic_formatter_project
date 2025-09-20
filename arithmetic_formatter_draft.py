@@ -92,6 +92,8 @@ def main():
         print("2. Please ensure to add spaces in between numbers and operators to avoid errors.")
         print("3. Numbers should only contain digits and cannot be more than 6 digits long.")
         print("4. Supported operators are +, -, *, and /.\n")
+        print("5.Decimals and fractions are not supported in this version.\n")
+        print("Let's get started!\n")
 
         problems=[]
         numb_problem=0
